@@ -39,21 +39,7 @@ export default function ProfileScreen(){
                 </View>
                 
             </View>
-            <View style={styles.Options}>
-                <View style={styles.Option}>
-                <FontAwesome5 name="hat-cowboy-side" style={styles.icon} size={35} color="#3CCECE"  />
-                    <Text style={styles.HeadingDescription}>VIP</Text>
-                </View>
-                <View style={styles.Option}>
-                    <FontAwesome name="group" style={styles.icon}  size={35} color="#3CCECE" />
-                    <Text style={styles.HeadingDescription}>Family</Text>
-                </View>
-                <View style={styles.Option}>
-                    <FontAwesome name="money" style={styles.icon}  size={35} color="#3CCECE" />
-                    <Text style={styles.HeadingDescription}>Earn Money</Text>
-                </View>
-                
-            </View>
+         
             <ProfileList />
           
        
@@ -128,7 +114,7 @@ const styles = StyleSheet.create({
         margin:10,
         borderRightWidth:1,
         borderLeftWidth:1,
-        borderColor:'black',
+        borderColor:'gray',
     },
     Heading:{
         fontSize:26,
@@ -139,20 +125,8 @@ const styles = StyleSheet.create({
         color:'black',
         textAlign:'center',
     },
-    Options:{
-        flexDirection:'row',
-        justifyContent:'center',
-    },
-    Option:{
-        backgroundColor:'#BCF0F1',
-        margin:5,
-        width:'25%',
-        padding:5,
-        borderRadius:10,
-       
-    },
+   
     icon:{
-       
         alignSelf:'center'
     }
    

@@ -20,6 +20,10 @@ import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../typ
 import LinkingConfiguration from './LinkingConfiguration';
 import ProfileScreen from '../screens/Profile/ProfileScreen';
 import ProfileTop from '../components/Profile/ProfileTop';
+import HomeTop from '../components/Home/HomeTop';
+import ExploreTop from '../components/Explore/ExploreTop';
+import BarTop from '../components/Bar/BarTop';
+import CameraScreen from '../screens/CameraScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -60,46 +64,45 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
+        name="Home"
         component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        options={{
           title: 'Home',
+          headerTitle:HomeTop,
+          headerStyle:{
+            backgroundColor:'#F56388',
+            height:80,
+       
+          },
           tabBarIcon: ({ color }) => <FontAwesome name="home" size={24} color="black" />,
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Modal')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
-        })}
+        }}
       />
+     
        <BottomTab.Screen
         name="Explore"
         component={TabTwoScreen}
         options={{
           title: 'Explore',
+          headerTitle:ExploreTop,
+          headerStyle:{
+            backgroundColor:'#F56388',
+            height:80,
+          },
           tabBarIcon: ({ color }) => <Ionicons name="earth" size={24} color="black" />,
         }}
       />
        <BottomTab.Screen
         name="Camera"
-        component={TabTwoScreen}
+        component={CameraScreen}
         options={{
           title: 'Camera',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="camera-iris"  size={35} color="#8fd6e1" />,
+          headerShown:false,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="camera-iris"  size={35} color="#F56388" />,
         }}
       />
       <BottomTab.Screen
@@ -107,6 +110,11 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Bar',
+          headerTitle:BarTop,
+          headerStyle:{
+            backgroundColor:'#F56388',
+            height:80,
+          },
           tabBarIcon: ({ color }) => <FontAwesome name="star" size={24} color="black" />,
         }}
       />
@@ -117,8 +125,8 @@ function BottomTabNavigator() {
           title:'Me',
           headerTitle:ProfileTop,
           headerStyle:{
-            backgroundColor:'#0DA3A4',
-       
+            backgroundColor:'#F56388',
+            height:90,
           },
           tabBarIcon: ({ color }) => <FontAwesome name="user-circle" size={24} color="black" />,
         }}

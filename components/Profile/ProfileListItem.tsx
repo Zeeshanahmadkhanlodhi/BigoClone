@@ -1,6 +1,6 @@
 import React from "react";
 import { View ,StyleSheet, Text } from "react-native";
-import { Feather ,AntDesign ,Entypo ,MaterialIcons ,MaterialCommunityIcons ,FontAwesome5 } from '@expo/vector-icons'; 
+import { Feather ,AntDesign ,Octicons ,Entypo ,FontAwesome ,MaterialIcons ,MaterialCommunityIcons ,FontAwesome5 } from '@expo/vector-icons'; 
 
 
 export default function ProfileListItem() {
@@ -9,7 +9,31 @@ export default function ProfileListItem() {
         <View style={styles.Items}>
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon}  name="message-square" size={25} color="green" />
+                    <MaterialCommunityIcons name="police-badge" style={styles.icon}  size={25} color="green" />
+                    <Text>VIP</Text>
+                </View>
+            <AntDesign name="right" size={24} color="black" />        
+            </View>
+            <View style={styles.Item}>
+                <View style={styles.ItemLeft}>
+                    <MaterialIcons name="family-restroom" style={styles.icon} size={25} color="purple"  />
+                    <Text>Family</Text>
+                </View>
+            <AntDesign name="right" size={24} color="black" />        
+            </View>
+            <View style={styles.Item}>
+                <View style={styles.ItemLeft}>
+                    <FontAwesome5 name="money-bill-alt" style={styles.icon} size={25} color="purple" />
+                    <Text>Earn Money</Text>
+                </View>
+            <AntDesign name="right" size={24} color="black" />        
+            </View>
+           
+        </View>
+        <View style={styles.Items}>
+            <View style={styles.Item}>
+                <View style={styles.ItemLeft}>
+                <Entypo name="message" size={30} color="green"  style={styles.icon}  />
                     <Text>Message</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
@@ -60,14 +84,14 @@ export default function ProfileListItem() {
             </View>
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon} name="message-square" size={25} color="#fbb454" />
+                    <FontAwesome name="group" style={styles.icon} size={25} color="#fbb454" />
                     <Text>Fans Group</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
             </View>
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon} name="message-square" size={25} color="#6c7b95" />
+                    <Octicons name="milestone" style={styles.icon} size={25} color="#6c7b95" />
                     <Text>Ranking</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
@@ -77,21 +101,21 @@ export default function ProfileListItem() {
             
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon} name="message-square" size={25} color="#464159" />
+                    <MaterialCommunityIcons name="barley" style={styles.icon} size={25} color="#464159" />
                     <Text>Creator Center</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
             </View>
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon} name="message-square" size={25} color="#8e3343" />
+                    <MaterialIcons name="feedback"  style={styles.icon} size={25} color="#8e3343" />
                     <Text>Feedback</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
             </View>
             <View style={styles.Item}>
                 <View style={styles.ItemLeft}>
-                    <Feather style={styles.icon} name="message-square" size={25} color="#19d3da" />
+                    <AntDesign name="facebook-square" style={styles.icon} size={25} color="#19d3da"/>
                     <Text>Like Us on Facebook</Text>
                 </View>
             <AntDesign name="right" size={24} color="black" />        
