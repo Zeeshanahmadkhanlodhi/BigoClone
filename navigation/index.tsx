@@ -24,6 +24,7 @@ import HomeTop from '../components/Home/HomeTop';
 import ExploreTop from '../components/Explore/ExploreTop';
 import BarTop from '../components/Bar/BarTop';
 import CameraScreen from '../screens/CameraScreen';
+import ExploreScreen from '../screens/ExploreScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -85,7 +86,7 @@ function BottomTabNavigator() {
      
        <BottomTab.Screen
         name="Explore"
-        component={TabTwoScreen}
+        component={ExploreScreen}
         options={{
           title: 'Explore',
           headerTitle:ExploreTop,

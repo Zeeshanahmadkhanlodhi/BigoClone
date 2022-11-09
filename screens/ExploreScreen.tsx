@@ -1,31 +1,41 @@
 import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import { Ionicons } from '@expo/vector-icons'; 
 import { Text, View } from '../components/Themed';
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+        <View style={styles.CountriesContainer}>
+          <View style={styles.CountriesHeader}>
+            <Text style={styles.CountiesHeaderLeft}>Countries & Region</Text>
+            <View style={styles.CountiesHeaderRight}>
+                <Text>More</Text>
+                <Ionicons name="chevron-forward-sharp" size={24} color="black" />
+            </View>
+          </View>
+          <View style={styles.CountiesBody}>
+
+          </View>
+        </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  container:{},
+  CountriesContainer:{
+    margin:10,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  CountriesHeader:{
+    flexDirection:'row',
+    justifyContent:'space-between',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  CountiesHeaderLeft:{
+    fontSize:16,
   },
+  CountiesHeaderRight:{
+    flexDirection:"row",
+    alignItems:'center'
+  },
+  CountiesBody:{},
 });
